@@ -38,7 +38,7 @@ class App extends preact.Component {
   render() {
     return (
       <div className="container">
-        <h1>Ethereum Signer</h1>
+        <h1>Clef UI</h1>
 
         {this.state.req.method == "ui_onInputRequired" && (
           <InputForm

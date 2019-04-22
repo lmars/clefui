@@ -1,4 +1,4 @@
-package signer
+package clefui
 
 import (
 	"context"
@@ -12,7 +12,7 @@ import (
 	"github.com/zserge/webview"
 )
 
-//go:generate go-bindata -o assets.go -pkg signer assets/...
+//go:generate go-bindata -o assets.go -pkg clefui assets/...
 
 func Run(ctx context.Context) error {
 	log.Info("Starting Clef")
@@ -62,7 +62,7 @@ const uiHTML = `
 func NewUI(clef *Clef) (*UI, error) {
 	// create a webview object
 	w := webview.New(webview.Settings{
-		Title: "Ethereum Signer",
+		Title: "Clef UI",
 		URL:   "data:text/html," + url.PathEscape(uiHTML),
 		Debug: true,
 	})

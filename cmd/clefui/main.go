@@ -7,7 +7,7 @@ import (
 	"syscall"
 
 	"github.com/ethereum/go-ethereum/log"
-	"github.com/lmars/signer"
+	"github.com/lmars/clefui"
 	isatty "github.com/mattn/go-isatty"
 )
 
@@ -31,8 +31,8 @@ func main() {
 		log.Info("Received signal, exiting...")
 	}()
 
-	// run the signer
-	if err := signer.Run(ctx); err != nil {
-		log.Crit("Error running signer", "err", err)
+	// run the Clef UI
+	if err := clefui.Run(ctx); err != nil {
+		log.Crit("Error running Clef UI", "err", err)
 	}
 }
