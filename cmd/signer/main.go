@@ -32,8 +32,7 @@ func main() {
 	}()
 
 	// run the signer
-	s := signer.New()
-	if err := s.Run(ctx); err != nil && err != signer.ErrShutdown {
+	if err := signer.Run(ctx); err != nil {
 		log.Crit("Error running signer", "err", err)
 	}
 }
